@@ -1,9 +1,3 @@
-import numpy as np
-import cv2
-import win32gui
-import mss
-import mss.tools
-
 import os
 import neat
 import visualize
@@ -67,12 +61,12 @@ def run(config_file):
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for up to 300 generations.
-    winner = p.run(eval_genomes, 300)
+    winner = p.run(eval_genomes, 1000)
 
     # Display the winning genome.
     print('\nBest genome:\n{!s}'.format(winner))
 
-    #p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-44')
+    #p = neat.Checkpointer.restore_checkpoint('neat-checkpoint-99')
     p.run(eval_genomes, 10)
 
 if __name__ == '__main__':

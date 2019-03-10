@@ -2,18 +2,18 @@
 fitness_criterion = max
 fitness_threshold = 2000
 no_fitness_termination = False
-pop_size = 60
+pop_size = 80
 reset_on_extinction = True
 
 [DefaultStagnation]
 species_fitness_func = mean
-max_stagnation = 10
+max_stagnation = 50
 species_elitism = 3
 
 [DefaultReproduction]
 elitism = 3
-survival_threshold = 0.6
-min_species_size = 20
+survival_threshold = 0.9
+min_species_size = 60
 [DefaultGenome]
 activation_default = random
 activation_mutate_rate = 0.2
@@ -42,7 +42,7 @@ feed_forward = False
 initial_connection = full_direct
 node_add_prob = 0.3
 node_delete_prob = 0.2
-num_hidden = 5
+num_hidden = 10
 num_inputs = 3
 num_outputs = 2
 response_init_mean = 0
